@@ -646,23 +646,23 @@ org 0100h
         exit_update_coinactive: ret
     update_coinactive endp
 
-    render_coin proc near
-        cmp coin_state, 2
+    render_coin proc near               ; Procedure to render coins
+        cmp coin_state, 2               ; if coin_state != 2 (not active), exit
         jne exit_rendercoin
         
-        cmp coin_value, 1
+        cmp coin_value, 1               ; If coin_value == 1, draw a silver coin
         je render_silvercoin
 
-        cmp coin_value, 2
+        cmp coin_value, 2               ; If coin_value == 2, draw a gold coin
         je render_goldcoin
 
-        cmp coin_value, 5
+        cmp coin_value, 5               ; If coin_value == 5, draw a ruby coin
         je render_rubycoin
 
-        jmp exit_rendercoin
+        jmp exit_rendercoin             ; exit
 
         exit_rendercoin:    ret
-        render_silvercoin:
+        render_silvercoin:              
             mov si, offset coinsilver            
             mov ax, coinx
             add ax, 4
@@ -1565,81 +1565,77 @@ org 0100h
             ret
     tutorial_printscreen endp
 
-    tutorial_input proc near                     
-        mov ah, 00h              
+    tutorial_input proc near        ; Procedure to track input in tutorial                   
+        mov ah, 00h                 ; DOS interrupt to wait for a keypress and stores it in AL
         int 16h                  
 
-        cmp al, 'a'              
+        cmp al, 'a'                 ; if input is a/A
         je a_keyinput            
         cmp al, 'A'              
         je a_keyinput            
 
-        cmp al, 'd'
+        cmp al, 'd'                 ; if input is d/D
         je d_keyinput
         cmp al, 'D'
         je d_keyinput
 
-        cmp al, 'e'
+        cmp al, 'e'                 ; if input is e/E
         je e_keyinput
         cmp al, 'E'
         je e_keyinput
 
-        jmp tutorial_input           
+        jmp tutorial_input          ; if none of the choices is pressed, loop
 
-        a_keyinput:
-            cmp tutorial_page, 1
-            je tutorial_input
-            dec tutorial_page
+        a_keyinput:                 
+            cmp tutorial_page, 1    ; if current page == 1 (first page)
+            je tutorial_input       ; take keypress
+            dec tutorial_page       ; decrement page value (go back)
             ret
         d_keyinput:
-            cmp tutorial_page, 5
-            je tutorial_input
-            inc tutorial_page
+            cmp tutorial_page, 5    ; if current page == 5 (last page)
+            je tutorial_input       ; take keypress
+            inc tutorial_page       ; increment page value (go next)
             ret
         e_keyinput:
-            mov game_state, 0
-            mov tutorial_page, 1
+            mov game_state, 0       ; set game_state to 0 (menu screen)
+            mov tutorial_page, 1    ; set tutorial_page to 0 (first page)
             ret
     tutorial_input endp
 
-    menu_input proc near
-        mov ah, 00h              
+    menu_input proc near            ; Procedure to track input in menu
+        mov ah, 00h                 ; DOS interrup to accept keypress, stores input in AL
         int 16h                  
-        cmp al, 's'              
+        cmp al, 's'                 ; if input == s/S
         je menu_skeyinput     
         cmp al, 'S'              
         je menu_skeyinput     
 
-        cmp al, 't'
+        cmp al, 't'                 ; if input == t/T
         je menu_tkeyinput
         cmp al, 'T'
         je menu_tkeyinput
 
-        cmp al, 'h'
+        cmp al, 'h'                 ; if input == h/H
         je menu_hkeyinput
         cmp al, 'H'
         je menu_hkeyinput
         
+        jmp menu_input              ; if none of the choices is pressed, loop
 
-
-        jmp menu_input           
-
-        menu_skeyinput:
+        menu_skeyinput:             ; if s is pressed, set game_state to 1 (playing game)
             mov game_state, 1        
             ret
 
-        menu_tkeyinput:
+        menu_tkeyinput:             ; if t is pressed, set game_state to 3 (tutorial)
             mov game_state, 3        
         
-        menu_hkeyinput:
+        menu_hkeyinput:             ; if h is pressed, set menu_page to 1 (main menu)
             mov menu_page, 1
             ret
     menu_input endp
   
-    menuscreen_printtext proc near
-         
-
-	     
+    menuscreen_printtext proc near  ; Procedure that prints text in the menu
+  
         mov bp, offset line1_menu         
         mov _stringx, 10
         mov _stringy, 04
@@ -1770,13 +1766,6 @@ org 0100h
      render_sideboxmenu endp
 
     render_icicle proc near
-         
-         
-         
-         
-         
-         
-         
          
         cmp icicle_state, 1          
         je icicle_trackingrender
