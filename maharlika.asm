@@ -62,7 +62,7 @@
     current_seconds db 0
     menu_page db 1 
 
-
+    last_roll1 db 0
      
     char_size dw 0fh
     char_x dw 0087h
@@ -2331,20 +2331,26 @@ org 0100h
             ret
     _update_obsXpos endp
 
-    nurng proc       
-         
-        mov ax, rngseed
-        mov bx, 0A9h
-        mul bx                 
-        add ax, 1              
-        mov rngseed, ax       
-         
+    nurng proc                      ; Core RNG procedure
+        reroll:
+            mov ax, rngseed         ; Loads current seed into AX
+            mov bx, 0A9h            ; Uses a multiplier (169)
+            mul bx                  ; Multiply AX by BX
+            add ax, 1               ; Add 1 to AX
+            mov rngseed, ax         ; Stores new seed back
+        
+            xor dx, dx              ; Clears DX
+            mov bx, 5               ; Modulo 5
+            div bx                  ; AX / BX - quotient in AL, remainder in DL
+            inc dl                  ; Increments DL, making result range to 1-5, instead of 0-4
 
-        xor dx, dx         
-        mov bx, 5           
-        div bx              
-        inc dl
-        mov randomNum, dl
+            ; Check if the last result has appeared before, reroll if yes
+            cmp dl, last_roll1
+            je reroll
+
+            mov randomNum, dl       ; Stores random result in randomNum
+
+            mov last_roll1, dl
         ret
     nurng endp
 
