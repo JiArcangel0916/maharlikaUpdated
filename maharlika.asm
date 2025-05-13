@@ -63,6 +63,7 @@
     menu_page db 1 
 
     last_roll1 db 0
+    last_roll2 db 0
      
     char_size dw 0fh
     char_x dw 0087h
@@ -2344,13 +2345,17 @@ org 0100h
             div bx                  ; AX / BX - quotient in AL, remainder in DL
             inc dl                  ; Increments DL, making result range to 1-5, instead of 0-4
 
-            ; Check if the last result has appeared before, reroll if yes
+            ; Check if the last two results has appeared before, reroll if yes
             cmp dl, last_roll1
             je reroll
 
-            mov randomNum, dl       ; Stores random result in randomNum
+            cmp dl, last_roll2
+            je reroll
 
-            mov last_roll1, dl
+            mov randomNum, dl       ; Stores random result in randomNum
+            mov dh, last_roll1      ; Stores last rolled seed to DH
+            mov last_roll2, dh      ; Stores DH to last_roll2
+            mov last_roll1, dl      ; Stores value of DL in last_roll1
         ret
     nurng endp
 
