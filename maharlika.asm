@@ -137,21 +137,53 @@
              db 00h, 00h, 28h, 28h, 28h, 28h, 00h, 00h, 00h
              db 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h
 
-    icicle  db 36h, 36h, 36h, 36h, 36h, 36h, 36h, 36h, 36h, 00h     ; icicle drawing
-            db 36h, 36h, 36h, 36h, 36h, 36h, 36h, 36h, 36h, 00h
-            db 00h, 36h, 36h, 36h, 36h, 36h, 36h, 36h, 00h, 00h
-            db 00h, 36h, 36h, 36h, 36h, 36h, 36h, 36h, 00h, 00h
-            db 00h, 00h, 36h, 36h, 36h, 36h, 36h, 00h, 00h, 00h
-            db 00h, 00h, 36h, 36h, 36h, 36h, 36h, 00h, 00h, 00h
-            db 00h, 00h, 36h, 36h, 36h, 36h, 36h, 00h, 00h, 00h
-            db 00h, 00h, 36h, 36h, 36h, 36h, 00h, 00h, 00h, 00h
-            db 00h, 00h, 00h, 36h, 36h, 36h, 00h, 00h, 00h, 00h
-            db 00h, 00h, 00h, 36h, 36h, 36h, 00h, 00h, 00h, 00h
-            db 00h, 00h, 00h, 36h, 36h, 00h, 00h, 00h, 00h, 00h
-            db 00h, 00h, 00h, 00h, 36h, 00h, 00h, 00h, 00h, 00h
-            db 00h, 00h, 00h, 00h, 36h, 00h, 00h, 00h, 00h, 00h
-            db 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h
-            db 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h
+    icicle_blue         db 36h, 36h, 36h, 36h, 36h, 36h, 36h, 36h, 36h, 00h     ; blue icicle drawing
+                        db 36h, 36h, 36h, 36h, 36h, 36h, 36h, 36h, 36h, 00h
+                        db 00h, 36h, 36h, 36h, 36h, 36h, 36h, 36h, 00h, 00h
+                        db 00h, 36h, 36h, 36h, 36h, 36h, 36h, 36h, 00h, 00h
+                        db 00h, 00h, 36h, 36h, 36h, 36h, 36h, 00h, 00h, 00h
+                        db 00h, 00h, 36h, 36h, 36h, 36h, 36h, 00h, 00h, 00h
+                        db 00h, 00h, 36h, 36h, 36h, 36h, 36h, 00h, 00h, 00h
+                        db 00h, 00h, 36h, 36h, 36h, 36h, 00h, 00h, 00h, 00h
+                        db 00h, 00h, 00h, 36h, 36h, 36h, 00h, 00h, 00h, 00h
+                        db 00h, 00h, 00h, 36h, 36h, 36h, 00h, 00h, 00h, 00h
+                        db 00h, 00h, 00h, 36h, 36h, 00h, 00h, 00h, 00h, 00h
+                        db 00h, 00h, 00h, 00h, 36h, 00h, 00h, 00h, 00h, 00h
+                        db 00h, 00h, 00h, 00h, 36h, 00h, 00h, 00h, 00h, 00h
+                        db 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h
+                        db 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h
+    
+    icicle_red          db 0ch, 0ch, 0ch, 0ch, 0ch, 0ch, 0ch, 0ch, 0ch, 00h     ; red icicle drawing
+                        db 0ch, 0ch, 0ch, 0ch, 0ch, 0ch, 0ch, 0ch, 0ch, 00h
+                        db 00h, 0ch, 0ch, 0ch, 0ch, 0ch, 0ch, 0ch, 00h, 00h
+                        db 00h, 0ch, 0ch, 0ch, 0ch, 0ch, 0ch, 0ch, 00h, 00h
+                        db 00h, 00h, 0ch, 0ch, 0ch, 0ch, 0ch, 00h, 00h, 00h
+                        db 00h, 00h, 0ch, 0ch, 0ch, 0ch, 0ch, 00h, 00h, 00h
+                        db 00h, 00h, 0ch, 0ch, 0ch, 0ch, 0ch, 00h, 00h, 00h
+                        db 00h, 00h, 0ch, 0ch, 0ch, 0ch, 00h, 00h, 00h, 00h
+                        db 00h, 00h, 00h, 0ch, 0ch, 0ch, 00h, 00h, 00h, 00h
+                        db 00h, 00h, 00h, 0ch, 0ch, 0ch, 00h, 00h, 00h, 00h
+                        db 00h, 00h, 00h, 0ch, 0ch, 00h, 00h, 00h, 00h, 00h
+                        db 00h, 00h, 00h, 00h, 0ch, 00h, 00h, 00h, 00h, 00h
+                        db 00h, 00h, 00h, 00h, 0ch, 00h, 00h, 00h, 00h, 00h
+                        db 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h
+                        db 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h
+
+    icicle_purple       db 0dh, 0dh, 0dh, 0dh, 0dh, 0dh, 0dh, 0dh, 0dh, 00h     ; purple icicle drawing
+                        db 0dh, 0dh, 0dh, 0dh, 0dh, 0dh, 0dh, 0dh, 0dh, 00h
+                        db 00h, 0dh, 0dh, 0dh, 0dh, 0dh, 0dh, 0dh, 00h, 00h
+                        db 00h, 0dh, 0dh, 0dh, 0dh, 0dh, 0dh, 0dh, 00h, 00h
+                        db 00h, 00h, 0dh, 0dh, 0dh, 0dh, 0dh, 00h, 00h, 00h
+                        db 00h, 00h, 0dh, 0dh, 0dh, 0dh, 0dh, 00h, 00h, 00h
+                        db 00h, 00h, 0dh, 0dh, 0dh, 0dh, 0dh, 00h, 00h, 00h
+                        db 00h, 00h, 0dh, 0dh, 0dh, 0dh, 00h, 00h, 00h, 00h
+                        db 00h, 00h, 00h, 0dh, 0dh, 0dh, 00h, 00h, 00h, 00h
+                        db 00h, 00h, 00h, 0dh, 0dh, 0dh, 00h, 00h, 00h, 00h
+                        db 00h, 00h, 00h, 0dh, 0dh, 00h, 00h, 00h, 00h, 00h
+                        db 00h, 00h, 00h, 00h, 0dh, 00h, 00h, 00h, 00h, 00h
+                        db 00h, 00h, 00h, 00h, 0dh, 00h, 00h, 00h, 00h, 00h
+                        db 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h
+                        db 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h
     
     Player_up  db 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h       
                db 00h, 00h, 00h, 2Fh, 00h, 2Fh, 00h, 2Fh, 2Fh, 2Fh, 2Fh, 00h, 00h, 00h, 2Fh, 00h
@@ -272,23 +304,61 @@
                         db 00h, 0fh, 0fh, 0fh, 0fh, 0fh, 0fh, 0fh, 0fh, 0fh, 0fh, 0fh, 0fh, 0fh, 0fh, 0fh, 0fh, 0fh, 0fh, 0fh, 00h, 00h, 00h, 0fh, 0fh, 0fh, 0fh, 0fh, 0fh, 0fh, 0fh, 0fh, 0fh, 0fh, 0fh, 0fh, 0fh, 0fh, 0fh, 00h, 00h, 00h, 0fh, 0fh, 0fh, 0fh, 0fh, 0fh, 0fh, 0fh, 0fh, 0fh, 0fh, 0fh, 0fh, 00h, 00h
                         db 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h
 
-    enemy   db 00h, 00h, 00h, 00h, 00h, 00h, 00h, 20h, 20h, 20h, 20h, 20h, 20h, 00h, 00h, 00h, 00h   
-            db 00h, 20h, 00h, 00h, 00h, 20h, 20h, 20h, 20h, 20h, 20h, 20h, 20h, 20h, 20h, 00h, 00h 
-            db 20h, 20h, 20h, 00h, 20h, 20h, 20h, 20h, 20h, 20h, 20h, 00h, 00h, 00h, 00h, 00h, 00h 
-            db 00h, 00h, 20h, 00h, 20h, 00h, 00h, 00h, 20h, 20h, 20h, 20h, 00h, 00h, 00h, 00h, 00h 
-            db 00h, 20h, 00h, 20h, 00h, 00h, 00h, 00h, 00h, 20h, 20h, 20h, 20h, 00h, 00h, 00h, 00h 
-            db 00h, 20h, 00h, 20h, 20h, 00h, 20h, 00h, 00h, 00h, 20h, 20h, 20h, 00h, 00h, 00h, 00h 
-            db 00h, 20h, 00h, 20h, 20h, 00h, 20h, 00h, 00h, 00h, 20h, 20h, 20h, 00h, 00h, 00h, 00h 
-            db 00h, 00h, 00h, 20h, 00h, 00h, 00h, 00h, 00h, 00h, 20h, 20h, 20h, 00h, 00h, 00h, 00h 
-            db 00h, 00h, 00h, 20h, 20h, 00h, 00h, 00h, 00h, 20h, 20h, 20h, 00h, 00h, 00h, 00h, 00h 
-            db 00h, 20h, 00h, 00h, 20h, 20h, 20h, 20h, 20h, 20h, 20h, 00h, 00h, 00h, 00h, 00h, 00h 
-            db 00h, 20h, 00h, 20h, 00h, 20h, 20h, 20h, 20h, 00h, 20h, 20h, 20h, 00h, 00h, 00h, 00h 
-            db 00h, 20h, 00h, 20h, 00h, 00h, 00h, 00h, 00h, 20h, 00h, 20h, 20h, 00h, 00h, 00h, 00h 
-            db 00h, 20h, 00h, 20h, 00h, 20h, 20h, 20h, 20h, 20h, 00h, 20h, 20h, 20h, 00h, 00h, 00h 
-            db 00h, 20h, 00h, 20h, 00h, 00h, 20h, 00h, 20h, 00h, 00h, 00h, 20h, 20h, 20h, 00h, 00h 
-            db 00h, 20h, 00h, 20h, 00h, 00h, 20h, 20h, 20h, 20h, 20h, 20h, 00h, 20h, 20h, 20h, 00h 
-            db 00h, 00h, 20h, 00h, 20h, 20h, 00h, 20h, 20h, 20h, 20h, 20h, 20h, 00h, 20h, 20h, 00h
-            db 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h
+    enemy_blue      db 00h, 00h, 00h, 00h, 00h, 00h, 00h, 20h, 20h, 20h, 20h, 20h, 20h, 00h, 00h, 00h, 00h   
+                    db 00h, 20h, 00h, 00h, 00h, 20h, 20h, 20h, 20h, 20h, 20h, 20h, 20h, 20h, 20h, 00h, 00h 
+                    db 20h, 20h, 20h, 00h, 20h, 20h, 20h, 20h, 20h, 20h, 20h, 00h, 00h, 00h, 00h, 00h, 00h 
+                    db 00h, 00h, 20h, 00h, 20h, 00h, 00h, 00h, 20h, 20h, 20h, 20h, 00h, 00h, 00h, 00h, 00h 
+                    db 00h, 20h, 00h, 20h, 00h, 00h, 00h, 00h, 00h, 20h, 20h, 20h, 20h, 00h, 00h, 00h, 00h 
+                    db 00h, 20h, 00h, 20h, 20h, 00h, 20h, 00h, 00h, 00h, 20h, 20h, 20h, 00h, 00h, 00h, 00h 
+                    db 00h, 20h, 00h, 20h, 20h, 00h, 20h, 00h, 00h, 00h, 20h, 20h, 20h, 00h, 00h, 00h, 00h 
+                    db 00h, 00h, 00h, 20h, 00h, 00h, 00h, 00h, 00h, 00h, 20h, 20h, 20h, 00h, 00h, 00h, 00h 
+                    db 00h, 00h, 00h, 20h, 20h, 00h, 00h, 00h, 00h, 20h, 20h, 20h, 00h, 00h, 00h, 00h, 00h 
+                    db 00h, 20h, 00h, 00h, 20h, 20h, 20h, 20h, 20h, 20h, 20h, 00h, 00h, 00h, 00h, 00h, 00h 
+                    db 00h, 20h, 00h, 20h, 00h, 20h, 20h, 20h, 20h, 00h, 20h, 20h, 20h, 00h, 00h, 00h, 00h 
+                    db 00h, 20h, 00h, 20h, 00h, 00h, 00h, 00h, 00h, 20h, 00h, 20h, 20h, 00h, 00h, 00h, 00h 
+                    db 00h, 20h, 00h, 20h, 00h, 20h, 20h, 20h, 20h, 20h, 00h, 20h, 20h, 20h, 00h, 00h, 00h 
+                    db 00h, 20h, 00h, 20h, 00h, 00h, 20h, 00h, 20h, 00h, 00h, 00h, 20h, 20h, 20h, 00h, 00h 
+                    db 00h, 20h, 00h, 20h, 00h, 00h, 20h, 20h, 20h, 20h, 20h, 20h, 00h, 20h, 20h, 20h, 00h 
+                    db 00h, 00h, 20h, 00h, 20h, 20h, 00h, 20h, 20h, 20h, 20h, 20h, 20h, 00h, 20h, 20h, 00h
+                    db 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h
+        
+    enemy_red       db 00h, 00h, 00h, 00h, 00h, 00h, 00h, 28h, 28h, 28h, 28h, 28h, 28h, 00h, 00h, 00h, 00h   
+                    db 00h, 28h, 00h, 00h, 00h, 28h, 28h, 28h, 28h, 28h, 28h, 28h, 28h, 28h, 28h, 00h, 00h 
+                    db 28h, 28h, 28h, 00h, 28h, 28h, 28h, 28h, 28h, 28h, 28h, 00h, 00h, 00h, 00h, 00h, 00h 
+                    db 00h, 00h, 28h, 00h, 28h, 00h, 00h, 00h, 28h, 28h, 28h, 28h, 00h, 00h, 00h, 00h, 00h 
+                    db 00h, 28h, 00h, 28h, 00h, 00h, 00h, 00h, 00h, 28h, 28h, 28h, 28h, 00h, 00h, 00h, 00h 
+                    db 00h, 28h, 00h, 28h, 28h, 00h, 28h, 00h, 00h, 00h, 28h, 28h, 28h, 00h, 00h, 00h, 00h 
+                    db 00h, 28h, 00h, 28h, 28h, 00h, 28h, 00h, 00h, 00h, 28h, 28h, 28h, 00h, 00h, 00h, 00h 
+                    db 00h, 00h, 00h, 28h, 00h, 00h, 00h, 00h, 00h, 00h, 28h, 28h, 28h, 00h, 00h, 00h, 00h 
+                    db 00h, 00h, 00h, 28h, 28h, 00h, 00h, 00h, 00h, 28h, 28h, 28h, 00h, 00h, 00h, 00h, 00h 
+                    db 00h, 28h, 00h, 00h, 28h, 28h, 28h, 28h, 28h, 28h, 28h, 00h, 00h, 00h, 00h, 00h, 00h 
+                    db 00h, 28h, 00h, 28h, 00h, 28h, 28h, 28h, 28h, 00h, 28h, 28h, 28h, 00h, 00h, 00h, 00h 
+                    db 00h, 28h, 00h, 28h, 00h, 00h, 00h, 00h, 00h, 28h, 00h, 28h, 28h, 00h, 00h, 00h, 00h 
+                    db 00h, 28h, 00h, 28h, 00h, 28h, 28h, 28h, 28h, 28h, 00h, 28h, 28h, 28h, 00h, 00h, 00h 
+                    db 00h, 28h, 00h, 28h, 00h, 00h, 28h, 00h, 28h, 00h, 00h, 00h, 28h, 28h, 28h, 00h, 00h 
+                    db 00h, 28h, 00h, 28h, 00h, 00h, 28h, 28h, 28h, 28h, 28h, 28h, 00h, 28h, 28h, 28h, 00h 
+                    db 00h, 00h, 28h, 00h, 28h, 28h, 00h, 28h, 28h, 28h, 28h, 28h, 28h, 00h, 28h, 28h, 00h
+                    db 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h
+
+    enemy_purple    db 00h, 00h, 00h, 00h, 00h, 00h, 00h, 05h, 05h, 05h, 05h, 05h, 05h, 00h, 00h, 00h, 00h   
+                    db 00h, 05h, 00h, 00h, 00h, 05h, 05h, 05h, 05h, 05h, 05h, 05h, 05h, 05h, 05h, 00h, 00h 
+                    db 05h, 05h, 05h, 00h, 05h, 05h, 05h, 05h, 05h, 05h, 05h, 00h, 00h, 00h, 00h, 00h, 00h 
+                    db 00h, 00h, 05h, 00h, 05h, 00h, 00h, 00h, 05h, 05h, 05h, 05h, 00h, 00h, 00h, 00h, 00h 
+                    db 00h, 05h, 00h, 05h, 00h, 00h, 00h, 00h, 00h, 05h, 05h, 05h, 05h, 00h, 00h, 00h, 00h 
+                    db 00h, 05h, 00h, 05h, 05h, 00h, 05h, 00h, 00h, 00h, 05h, 05h, 05h, 00h, 00h, 00h, 00h 
+                    db 00h, 05h, 00h, 05h, 05h, 00h, 05h, 00h, 00h, 00h, 05h, 05h, 05h, 00h, 00h, 00h, 00h 
+                    db 00h, 00h, 00h, 05h, 00h, 00h, 00h, 00h, 00h, 00h, 05h, 05h, 05h, 00h, 00h, 00h, 00h 
+                    db 00h, 00h, 00h, 05h, 05h, 00h, 00h, 00h, 00h, 05h, 05h, 05h, 00h, 00h, 00h, 00h, 00h 
+                    db 00h, 05h, 00h, 00h, 05h, 05h, 05h, 05h, 05h, 05h, 05h, 00h, 00h, 00h, 00h, 00h, 00h 
+                    db 00h, 05h, 00h, 05h, 00h, 05h, 05h, 05h, 05h, 00h, 05h, 05h, 05h, 00h, 00h, 00h, 00h 
+                    db 00h, 05h, 00h, 05h, 00h, 00h, 00h, 00h, 00h, 05h, 00h, 05h, 05h, 00h, 00h, 00h, 00h 
+                    db 00h, 05h, 00h, 05h, 00h, 05h, 05h, 05h, 05h, 05h, 00h, 05h, 05h, 05h, 00h, 00h, 00h 
+                    db 00h, 05h, 00h, 05h, 00h, 00h, 05h, 00h, 05h, 00h, 00h, 00h, 05h, 05h, 05h, 00h, 00h 
+                    db 00h, 05h, 00h, 05h, 00h, 00h, 05h, 05h, 05h, 05h, 05h, 05h, 00h, 05h, 05h, 05h, 00h 
+                    db 00h, 00h, 05h, 00h, 05h, 05h, 00h, 05h, 05h, 05h, 05h, 05h, 05h, 00h, 05h, 05h, 00h
+                    db 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h
+
+
             
     ingame_towerseg1    dB 00h, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 00h, 00h, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 00h, 00h   
                         DB 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 00h, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 0Fh, 00h
@@ -603,10 +673,10 @@ org 0100h
 
     update_coinvalue proc near          ; Procedure that updates the coin value
         call calculate_overallscore     ; Updates or recalculates the overall score
-        cmp score_overallhex, 100       ; If overall score < 100, silver coin will appear
+        cmp score_overallhex, 50       ; If overall score < the indicated value, silver coin will appear
         jl set_coinsilver
 
-        cmp score_overallhex, 200       ; If overall score < 200, gold coin will appear
+        cmp score_overallhex, 100       ; If overall score < the indicated value, gold coin will appear
         jl set_coingold
 
         cmp score_overallhex, 999       ; If overall score < 999, ruby coin will appear
@@ -1160,7 +1230,7 @@ org 0100h
             mov _rendersizeY, 17
             call _rendersprite
 
-            mov si, offset enemy
+            mov si, offset enemy_blue
             mov rendercoordX, 195
             mov rendercoordY, 52
             mov _rendersizeX, 17
@@ -1209,7 +1279,7 @@ org 0100h
             mov _rendersizeY, 17
             call _rendersprite
 
-            mov si, offset icicle
+            mov si, offset icicle_blue
             mov rendercoordX, 132
             mov rendercoordY, 40
             mov _rendersizeX, 10
@@ -1789,17 +1859,53 @@ org 0100h
             ret                              
 
         icicle_activerender:
-            push si                          
-            mov si, offset icicle            
-            mov ax, iciclex
-            mov rendercoordX, ax             
-            mov ax, icicley
-            mov rendercoordY, ax             
-            mov _rendersizeX, 10             
-            mov _rendersizeY, 15             
-            call _rendersprite
-            pop si                           
-            jmp exit_rendericicle
+            push si
+
+            call calculate_overallscore     ; Recalculates the overall score
+            cmp score_overallhex, 25        ; If score < the indicated value, render icicle_blue
+            jl drawicicle_blue
+
+            cmp score_overallhex, 50       ; If score < the indicated value, render icicle_red
+            jl drawicicle_red
+
+            cmp score_overallhex, 999       ; If score < 999, render icicle_purple
+            jl drawicicle_purple
+
+            drawicicle_blue:
+                mov si, offset icicle_blue            
+                mov ax, iciclex
+                mov rendercoordX, ax             
+                mov ax, icicley
+                mov rendercoordY, ax             
+                mov _rendersizeX, 10             
+                mov _rendersizeY, 15             
+                call _rendersprite
+                pop si                           
+                jmp exit_rendericicle
+
+            drawicicle_red:
+                mov si, offset icicle_red            
+                mov ax, iciclex
+                mov rendercoordX, ax             
+                mov ax, icicley
+                mov rendercoordY, ax             
+                mov _rendersizeX, 10             
+                mov _rendersizeY, 15             
+                call _rendersprite
+                pop si                           
+                jmp exit_rendericicle
+
+            drawicicle_purple:
+                mov si, offset icicle_purple            
+                mov ax, iciclex
+                mov rendercoordX, ax             
+                mov ax, icicley
+                mov rendercoordY, ax             
+                mov _rendersizeX, 10             
+                mov _rendersizeY, 15             
+                call _rendersprite
+                pop si                           
+                jmp exit_rendericicle
 
         exit_rendericicle:  ret
     render_icicle endp
@@ -2016,17 +2122,56 @@ org 0100h
 
     render_enemy proc near
         cmp enemy_state, 0               
-        je exit_drawenemy
+        je jumpto_exit_drawenemy
 
-        mov si, offset enemy             
-        mov ax, enemy_x
-        mov rendercoordX, ax             
-        mov ax, enemy_y
-        mov rendercoordY, ax             
-        mov _rendersizeX, 17             
-        mov _rendersizeY, 17             
-        call _rendersprite
+        call calculate_overallscore     ; Recalculates the overall score
+        cmp score_overallhex, 25        ; If score < the indicated value, render enemy_blue
+        jl drawenemy_blue
 
+        cmp score_overallhex, 50       ; If score < the indicated value, render enemy_red
+        jl drawenemy_red
+
+        cmp score_overallhex, 999       ; If score < 999, render enemy_purple
+        jl drawenemy_purple
+
+        drawenemy_blue:
+            mov si, offset enemy_blue             
+            mov ax, enemy_x
+            mov rendercoordX, ax             
+            mov ax, enemy_y
+            mov rendercoordY, ax             
+            mov _rendersizeX, 17             
+            mov _rendersizeY, 17             
+            call _rendersprite
+            jmp continue_enemybehavior
+
+        drawenemy_red:
+            mov si, offset enemy_red           
+            mov ax, enemy_x
+            mov rendercoordX, ax             
+            mov ax, enemy_y
+            mov rendercoordY, ax             
+            mov _rendersizeX, 17             
+            mov _rendersizeY, 17             
+            call _rendersprite
+            jmp continue_enemybehavior
+
+        drawenemy_purple:
+            mov si, offset enemy_purple            
+            mov ax, enemy_x
+            mov rendercoordX, ax             
+            mov ax, enemy_y
+            mov rendercoordY, ax             
+            mov _rendersizeX, 17             
+            mov _rendersizeY, 17             
+            call _rendersprite
+            jmp continue_enemybehavior
+            
+
+        jumpto_exit_drawenemy:          ; Extends jump to exceed assembly limits
+            jmp exit_drawenemy
+
+        continue_enemybehavior:         ; Ensures proper enemy behavior after rendering
         cmp enemy_state, 2              
         jne exit_drawenemy               
                                                
@@ -2045,23 +2190,51 @@ org 0100h
             mov dl, 26               
             int 10h 
 
-            mov ah, 0Eh              
-            mov al, '!'
-            mov bh, 0
-            mov bl, 20h              
-            int 10h
+            cmp score_overallhex, 25        ; If score < the indicated value, render blue exclamation
+            jl exclamation_blue
 
-            mov ah, 2ch              
-            int 21h
+            cmp score_overallhex, 50       ; If score < the indicated value, render red exclamation
+            jl exclamation_red
 
-            xor ax, ax
-            mov al, dl       
-            mov bl, 2        
-            div bl           
+            cmp score_overallhex, 999       ; If score < 999, render purple exclamation
+            jl exclamation_purple
 
-            cmp ah, 0        
-            je draw_exclamation     
-            ret
+            exclamation_blue:
+                mov ah, 0Eh              
+                mov al, '!'
+                mov bh, 0
+                mov bl, 20h     ; exclamation color              
+                int 10h
+                jmp continue_draw_exclamation
+            
+            exclamation_red:
+                mov ah, 0Eh              
+                mov al, '!'
+                mov bh, 0
+                mov bl, 28h     ; exclamation color              
+                int 10h
+                jmp continue_draw_exclamation
+            
+            exclamation_purple:
+                mov ah, 0Eh              
+                mov al, '!'
+                mov bh, 0
+                mov bl, 05h     ; exclamation color              
+                int 10h
+                jmp continue_draw_exclamation
+            
+            continue_draw_exclamation:
+                mov ah, 2ch              
+                int 21h
+
+                xor ax, ax
+                mov al, dl       
+                mov bl, 2        
+                div bl           
+
+                cmp ah, 0        
+                je draw_exclamation     
+                ret
 
             draw_exclamation:
                 mov ah, 02h              
