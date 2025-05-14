@@ -673,10 +673,10 @@ org 0100h
 
     update_coinvalue proc near          ; Procedure that updates the coin value
         call calculate_overallscore     ; Updates or recalculates the overall score
-        cmp score_overallhex, 50       ; If overall score < 100, silver coin will appear
+        cmp score_overallhex, 50       ; If overall score < the indicated value, silver coin will appear
         jl set_coinsilver
 
-        cmp score_overallhex, 100       ; If overall score < 200, gold coin will appear
+        cmp score_overallhex, 100       ; If overall score < the indicated value, gold coin will appear
         jl set_coingold
 
         cmp score_overallhex, 999       ; If overall score < 999, ruby coin will appear
@@ -1862,10 +1862,10 @@ org 0100h
             push si
 
             call calculate_overallscore     ; Recalculates the overall score
-            cmp score_overallhex, 25        ; If score < 50, render icicle_blue
+            cmp score_overallhex, 25        ; If score < the indicated value, render icicle_blue
             jl drawicicle_blue
 
-            cmp score_overallhex, 50       ; If score < 100, render icicle_red
+            cmp score_overallhex, 50       ; If score < the indicated value, render icicle_red
             jl drawicicle_red
 
             cmp score_overallhex, 999       ; If score < 999, render icicle_purple
@@ -2125,10 +2125,10 @@ org 0100h
         je jumpto_exit_drawenemy
 
         call calculate_overallscore     ; Recalculates the overall score
-        cmp score_overallhex, 25        ; If score < 50, render enemy_blue
+        cmp score_overallhex, 25        ; If score < the indicated value, render enemy_blue
         jl drawenemy_blue
 
-        cmp score_overallhex, 50       ; If score < 100, render enemy_red
+        cmp score_overallhex, 50       ; If score < the indicated value, render enemy_red
         jl drawenemy_red
 
         cmp score_overallhex, 999       ; If score < 999, render enemy_purple
@@ -2190,10 +2190,10 @@ org 0100h
             mov dl, 26               
             int 10h 
 
-            cmp score_overallhex, 25        ; If score < 50, render blue exclamation
+            cmp score_overallhex, 25        ; If score < the indicated value, render blue exclamation
             jl exclamation_blue
 
-            cmp score_overallhex, 50       ; If score < 100, render red exclamation
+            cmp score_overallhex, 50       ; If score < the indicated value, render red exclamation
             jl exclamation_red
 
             cmp score_overallhex, 999       ; If score < 999, render purple exclamation
